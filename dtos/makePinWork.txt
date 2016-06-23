@@ -1,0 +1,25 @@
+echo am33xx_pwm > /sys/devices/bone_capemgr.9/slots
+echo bone_pwm_P8_13 > /sys/devices/bone_capemgr.9/slots
+cd /sys/devices/ocp.3/pwm_test_P8_13.15
+echo "1" > run
+echo "0" > polarity
+echo "20000000" > period
+echo "2000000" > duty
+echo "0" > duty
+echo "1500000" > duty
+
+
+
+
+// custom dto
+
+cd servo/dtos
+cp *.dtbo /lib/firmware
+echo bspwm_P9_16_16 > /sys/devices/bone_capemgr.9/slots
+cd /sys/devices/ocp.3/bs_pwm_test_P9_16.16
+echo "1" > run
+echo "0" > polarity
+echo "20000000" > period
+echo "2000000" > duty
+echo "0" > duty
+echo "1500000" > duty

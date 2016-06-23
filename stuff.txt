@@ -1,0 +1,9 @@
+cd /sys/devices/bone_capemgr.9/
+echo am33xx_pwm > ./slots
+echo bone_pwm_P8_19 > slots
+cat slots
+cd /sys/devices/ocp.3/pwm_test_P8_19.15/
+echo 20000000 > period 
+echo 0 > polarity 
+echo 1500000 > duty
+
